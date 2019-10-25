@@ -1,0 +1,40 @@
+<div> Book:
+        <select id="monthSelect" (change) = "changeMonths($event)">
+          <option [value] = "j" *ngFor="let j of booksArr">{{j}}</option>
+        </select>
+        Selected book is: <b> {{selectedBook}}</b><br/>
+</div><br/>
+ 
+ <div>
+   <form [formGroup]="addBookForm" (ngSubmit)="bookSubmit(addBookForm.value)">
+     <table>
+       <tr>
+         <td>Name:</td>
+         <td><input pInputText formControlName="bookName"><br/></td>
+       </tr>
+       <tr>
+          <td>Author:</td>
+          <td><input pInputText formControlName="bookAuthor"><br/></td>
+        </tr>
+        <tr>
+            <td>Category:</td>
+            <td><input pInputText formControlName="bookCategory"><br/></td>
+        </tr>
+        <tr>
+            <td>Publication:</td>
+            <td><input pInputText formControlName="bookPublication"><br/></td>
+        </tr>
+        <tr>
+            <td>Publication Date:</td>
+            <td><input pInputText formControlName="bookPublicationDate"><br/></td>
+        </tr>
+        <tr>
+            <td>Price:</td>
+            <td><input pInputText formControlName="bookPrice"></td>
+        </tr>
+        <tr>
+          <td><button type="submit" >Submit</button></td>
+        </tr>
+     </table>     
+   </form>
+ </div>

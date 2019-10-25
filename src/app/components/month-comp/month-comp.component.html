@@ -1,0 +1,6 @@
+<div> Months:
+                <select id="monthSelect" (change) = "changeMonths($event)">
+                  <option *ngFor="let j of months">{{j}}</option>
+                </select>
+</div>
+              Selected month is: <b> {{selectedMonth}}</b>
